@@ -296,3 +296,22 @@ jobs:
           token: ${{ secrets.RELEASE_TOKEN }}
           tag: ${{ env.WORKFLOW_GIT_TAG }}
 ```
+---
+
+# Using the Workflow
+
+Follow these simple steps to integrate and use the workflow:
+
+## Step 1: Add the Workflow File
+Save the [workflow file](https://github.com/Blindspot22/rustlease/blob/main/index.md) in your repository under `.github/workflows/release.yml`.
+
+## Step 2: Create a Personal Access Token (PAT)
+Create a PAT that allows the workflow to perform pushes, make tags, and perform releases for you. Store the PAT in the project secrets as `RELEASE_TOKEN`.
+
+For reference on how to create a PAT ([LINK]()).
+
+## Step 3: Run the Workflow
+
+- Go to your GitHub repository and navigate to the **Actions** tab.
+- Select the **Release Workflow** from the left-hand panel.
+- Click **Run workflow** in the top-right corner, select the release type (major, minor, or patch), and let the automation do the rest!
