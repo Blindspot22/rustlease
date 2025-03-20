@@ -22,8 +22,6 @@ A **release workflow** automates the steps required to produce valid, consistent
 
 Rust, along with many other software ecosystems, uses semantic versioning to communicate expectations about releases. Semantic versioning breaks a version number into three parts: Major.Minor.Patch (e.g., `1.2.3`). Each part signifies a different level of change in your software.
 
---- 
-
 # Patch Releases
 
 - **Format:** `1.2.3 → 1.2.4` 
@@ -43,3 +41,17 @@ Rust, along with many other software ecosystems, uses semantic versioning to com
 - **Impact:** Users must test extensively and plan for potential disruptions.
 
 When retiring features, it’s best practice to provide a deprecation notice in earlier versions, giving users time to adapt to the new way of doing things.
+
+---
+
+# Single-Click Releases in Rust Using GitHub Actions
+
+To streamline release pipelines, I’ve designed a flexible GitHub Actions workflow that simplifies the process into a single click. This workflow is applicable to most Rust projects, and automates versioning, building, and releasing your software.
+
+# Key Features of the Workflow
+
+- **Versatility:** Supports major, minor, and patch releases.
+- **Automation:** Automatically increments version numbers based on semantic versioning.
+- **Cross-Platform Support:** Builds for multiple platforms, including Linux, macOS, and Windows.
+- **Extensibility:** Can be modified to publish to [crates.io](https://crates.io/) or other targets.
+
